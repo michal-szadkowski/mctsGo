@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "CMake",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"-S",
+				"${fileDirname}",
+				"-B",
+				"${fileDirname}/build"
+			],
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"dependsOn": [
+				"CMake"
+			],
+			"label": "make",
+			"type": "shell",
+			"command": "make",
+			"args": [
+				"-C",
+				"${fileDirname}/build"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
