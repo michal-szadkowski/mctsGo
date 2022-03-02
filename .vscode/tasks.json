@@ -7,9 +7,9 @@
 			"command": "cmake",
 			"args": [
 				"-S",
-				"${fileDirname}",
+				"${workspaceFolder}",
 				"-B",
-				"${fileDirname}/build"
+				"${workspaceFolder}/build"
 			],
 			"group": "build",
 			"problemMatcher": []
@@ -23,7 +23,7 @@
 			"command": "make",
 			"args": [
 				"-C",
-				"${fileDirname}/build"
+				"${workspaceFolder}/build"
 			],
 			"problemMatcher": [],
 			"group": {
